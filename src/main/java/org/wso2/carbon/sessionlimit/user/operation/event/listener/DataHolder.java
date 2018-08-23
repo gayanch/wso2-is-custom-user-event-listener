@@ -1,4 +1,4 @@
-package org.wso2.carbon.sample.user.operation.event.listener;
+package org.wso2.carbon.sessionlimit.user.operation.event.listener;
 
 import org.wso2.carbon.user.core.service.RealmService;
 
@@ -6,7 +6,7 @@ public class DataHolder {
 
     private static RealmService realmService;
     private static volatile DataHolder dataHolder;
-    private static SampleUserOperationEventListener customUserOperationEventListener;
+    private static SessionLimitingUserOperationEventListener customUserOperationEventListener;
 
     private DataHolder() {
 
@@ -19,7 +19,7 @@ public class DataHolder {
             synchronized (DataHolder.class) {
                 if (dataHolder == null) {
                     dataHolder = new DataHolder();
-                    customUserOperationEventListener = new SampleUserOperationEventListener();
+                    customUserOperationEventListener = new SessionLimitingUserOperationEventListener();
                 }
             }
 
@@ -36,7 +36,7 @@ public class DataHolder {
         return realmService;
     }
 
-    public SampleUserOperationEventListener getCustomUserOperationEventListener() {
+    public SessionLimitingUserOperationEventListener getCustomUserOperationEventListener() {
         return customUserOperationEventListener;
     }
 

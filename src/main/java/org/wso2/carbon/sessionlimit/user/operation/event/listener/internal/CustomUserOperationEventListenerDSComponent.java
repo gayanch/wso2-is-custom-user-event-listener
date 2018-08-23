@@ -1,16 +1,16 @@
-package org.wso2.carbon.sample.user.operation.event.listener.internal;
+package org.wso2.carbon.sessionlimit.user.operation.event.listener.internal;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.osgi.service.component.ComponentContext;
-import org.wso2.carbon.sample.user.operation.event.listener.DataHolder;
+import org.wso2.carbon.sessionlimit.user.operation.event.listener.DataHolder;
 import org.wso2.carbon.user.core.listener.UserOperationEventListener;
 import org.wso2.carbon.user.core.service.RealmService;
 
 import java.util.Properties;
 
 /**
- * @scr.component name="sample.user.operation.event.listener.dscomponent" immediate=true
+ * @scr.component name="sessionlimit.user.operation.event.listener.dscomponent" immediate=true
  * @scr.reference name="realm.service"
  * interface="org.wso2.carbon.user.core.service.RealmService"cardinality="1..1"
  * policy="dynamic" bind="setRealmService" unbind="unsetRealmService"

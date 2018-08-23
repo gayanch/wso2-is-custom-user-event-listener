@@ -1,4 +1,4 @@
-package org.wso2.carbon.sample.user.operation.event.listener.util;
+package org.wso2.carbon.sessionlimit.user.operation.event.listener.util;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

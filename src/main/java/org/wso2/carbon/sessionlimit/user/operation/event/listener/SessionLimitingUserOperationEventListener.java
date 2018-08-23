@@ -1,9 +1,9 @@
-package org.wso2.carbon.sample.user.operation.event.listener;
+package org.wso2.carbon.sessionlimit.user.operation.event.listener;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.wso2.carbon.context.CarbonContext;
-import org.wso2.carbon.sample.user.operation.event.listener.util.DataPublisherDbUtil;
+import org.wso2.carbon.sessionlimit.user.operation.event.listener.util.DataPublisherDbUtil;
 import org.wso2.carbon.user.api.Permission;
 import org.wso2.carbon.user.core.UserStoreException;
 import org.wso2.carbon.user.core.UserStoreManager;
@@ -13,9 +13,9 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
-public class SampleUserOperationEventListener extends AbstractUserOperationEventListener {
+public class SessionLimitingUserOperationEventListener extends AbstractUserOperationEventListener {
 
-    private static Log log = LogFactory.getLog(SampleUserOperationEventListener.class);
+    private static Log log = LogFactory.getLog(SessionLimitingUserOperationEventListener.class);
 
     @Override
     public int getExecutionOrderId() {
